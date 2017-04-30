@@ -2,11 +2,6 @@ $(document).ready(function () {
   var wrapper = $('.login-wrapper'),
       loginApi = 'login',
       loginButton = document.getElementById('user-login');
-  loginButton.addEventListener('click', tryLogin);
-
-  var user = wrapper.find('.username').val().trim(),
-      password = wrapper.find('.pass').val();
-
   function tryLogin() {
     $.ajax({
       url: loginApi,
@@ -22,5 +17,11 @@ $(document).ready(function () {
     .fail( function( resp ) {
 
     });
+  }
+  if ( loginButton !== null ) {
+    loginButton.addEventListener('click', tryLogin);
+
+    var user = wrapper.find('.username').val().trim(),
+        password = wrapper.find('.pass').val();
   }
 });

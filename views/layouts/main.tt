@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title><% title %></title>
   <link rel="stylesheet" href="<% request.uri_base %>/css/style.css">
+  <link rel="stylesheet" href="<% request.uri_base %>/css/login.css">
+  <link rel="stylesheet" href="<% request.uri_base %>/css/navigator.css">
+  <link rel="stylesheet" href="<% request.uri_base %>/css/create-quiz.css">
   <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto">
 </head>

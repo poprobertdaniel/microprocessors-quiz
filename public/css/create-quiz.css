@@ -1,0 +1,55 @@
+.create-quiz-form {
+  width:500px;
+  margin:30px auto;
+  border:1px solid silver;
+  background:white;
+  border-radius:0.3em;
+  box-shadow:0 0 5px rgba(0,0,0,0.3);
+  padding:20px;
+}
+.create-quiz-form h1 {
+ 	text-align:center;
+  text-transform:uppercase;
+  font-size:15px;
+  font-weight:bold;
+  color:#666;
+  border-bottom:1px solid silver;
+  padding-bottom:10px;
+  margin-bottom:10px;
+}
+.create-quiz-form label {
+  display:block;
+  padding:15px 0 5px 0;
+  font-size: 14px;
+}
+.create-quiz-form input[type=text], input[type=password] {
+ 	padding:3px;
+  border:1px solid #7f9db9;
+  height: 20px;
+  width: 100%;
+  outline: none;
+}
+.create-quiz-form select {
+  padding:3px;
+  border:1px solid #7f9db9;
+  height: 25px;
+  outline: none;
+}
+.create-quiz-form .btn-container label {
+ 	display:inline-block;
+  padding:5px 0;
+}
+.create-quiz-form .radio-group.singleline .btn-container {
+ 	 float:left;
+}
+.create-quiz-form .radio-group.singleline {
+ 	*zoom:1;
+}
+.create-quiz-form .radio-group.singleline:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+.create-quiz-form .question-points {
+  outline: none;
+}
