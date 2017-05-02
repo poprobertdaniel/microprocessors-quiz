@@ -22,7 +22,7 @@
   padding:15px 0 5px 0;
   font-size: 14px;
 }
-.create-quiz-form input[type=text], input[type=password] {
+.create-quiz-form input[type=text], .create-quiz-form input[type=password] {
  	padding:3px;
   border:1px solid #7f9db9;
   height: 20px;
