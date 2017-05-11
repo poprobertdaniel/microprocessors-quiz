@@ -38,12 +38,25 @@ template: "simple"
 # Default value for 'cookie_name' is 'dancer.session'. If you run multiple
 # Dancer apps on the same host then you will need to make sure 'cookie_name'
 # is different for each app.
-#
-#engines:
+
+plugins:
+  DBIC:
+    default:
+      dsn: dbi:mysql:quiz
+      schema_class: Quiz::Model::Schema
+      user: root
+      password: dev
+      options:
+        RaiseError: 1
+        PrintError: 1
+      mysql_enable_utf8: 1
+      on_connect_do: ['SET NAMES "utf8"', 'SET CHARACTER SET "utf8"']
+
+# engines:
 #  session:
 #    Simple:
 #      cookie_name: testapp.session
-#
+
 #engines:
 #  session:
 #    YAML:
