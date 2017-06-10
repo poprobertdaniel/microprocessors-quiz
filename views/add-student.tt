@@ -1,0 +1,14 @@
+<form class="add-student-form">
+  <h1>Add a new student</h1>
+  <label for="input-text">First name</label>
+  <input type="text" name="input-text" class="question-text" placeholder="First name">
+  <label for="input-text">Last name</label>
+  <input type="text" name="input-text" class="question-text" placeholder="Last name">
+  <label for="input-text">Login username</label>
+  <input type="text" name="input-text" class="question-text" placeholder="Username">
+  <label for="input-text">Password</label>
+  <input type="text" name="input-text" class="question-text" placeholder="Password">
+  <div class="submit-wrapper">
+    <button id="add-new-student" type="button" name="create-quiz">Add new student</button>
+  </div>
+</form>

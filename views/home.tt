@@ -3,7 +3,7 @@
   	<ul>
   		<li><a href="/home/create-quiz">Create quiz</a></li>
       <li><a href="/view-quizes">View quizes</a></li>
-  		<li><a href="/add-students">Add Students</a></li>
+  		<li><a href="/home/add-student">Add Students</a></li>
   		<li><a href="/view-students">List of Students</a></li>
     </ul>
   </section>

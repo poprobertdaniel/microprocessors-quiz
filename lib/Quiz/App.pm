@@ -17,4 +17,9 @@ get '/home' => sub {
 get '/home/create-quiz' => sub {
     template 'create-quiz';
 };
+
+get '/home/add-student' => sub {
+    template 'add-student';
+};
+
 true;

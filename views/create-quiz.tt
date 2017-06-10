@@ -49,4 +49,7 @@
   </select>
   <label for="input-text">Question points</label>
   <input type="number" name="input-text" class="question-points" placeholder="Question points">
+  <div class="submit-wrapper">
+    <button id="create-new-quiz" type="button" name="create-quiz">Submit new quiz</button>
+  </div>
 </form>
