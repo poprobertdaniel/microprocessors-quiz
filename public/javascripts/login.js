@@ -3,9 +3,10 @@ $(document).ready(function () {
       loginApi = 'login',
       loginButton = document.getElementById('user-login');
   function tryLogin() {
+      console.log(user);
     $.ajax({
       url: loginApi,
-      type: 'POST',
+      type: 'GET',
       data: {
         username: user,
         password: password

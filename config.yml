@@ -42,7 +42,7 @@ template: "simple"
 plugins:
   DBIC:
     default:
-      dsn: dbi:mysql:quiz
+      dsn: dbi:mysql:quiz:172.17.0.1
       schema_class: Quiz::Model::Schema
       user: root
       password: dev

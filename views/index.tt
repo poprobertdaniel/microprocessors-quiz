@@ -1,7 +1,9 @@
 <div class="main-wrapper">
   <div class="login-wrapper">
-    <input type="text" name="username" id="" placeholder="Username" class="username">
-    <input type="password" name="password" id="" placeholder="Password" class="pass">
-    <button id="user-login" type="submit">Login into Microprocessors Quiz</button>
+    <form  method='POST' action='/login'>
+        <input type="text" name="username" id="" placeholder="Username" class="username">
+        <input type="password" name="password" id="" placeholder="Password" class="pass">
+        <button type="submit">Login into Microprocessors Quiz</button>
+    </form>
   </div>
 </div>
