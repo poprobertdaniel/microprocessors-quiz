@@ -1,0 +1,28 @@
+<div class="list-of-quizes-wrapper">
+    <table class="students-table">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Chapter</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

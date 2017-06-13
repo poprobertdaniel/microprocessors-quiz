@@ -1,9 +1,11 @@
 <div class="home-wrapper">
   <section class="site-navigator">
   	<ul>
-  		<li><a href="/student">Home</a></li>
-        <li><a href="/student/quiz">Quiz</a></li>
+        <li><a href="/student/quiz">Start quiz</a></li>
         <li><a href="/logout">Logout</a></li>
     </ul>
+  </section>
+  <section class="site-background">
+
   </section>
 </div>

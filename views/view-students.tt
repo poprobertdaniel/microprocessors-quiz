@@ -1,0 +1,32 @@
+<div class="list-of-students-wrapper">
+    <table class="students-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>12345</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

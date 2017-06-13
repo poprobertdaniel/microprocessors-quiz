@@ -1,28 +1,29 @@
 $(document).ready(function () {
-  var wrapper = $('.login-wrapper'),
-      loginApi = 'login',
-      loginButton = document.getElementById('user-login');
-  function tryLogin() {
-      console.log(user);
-    $.ajax({
-      url: loginApi,
-      type: 'GET',
-      data: {
-        username: user,
-        password: password
-      }
-    })
-    .done( function( resp ) {
 
-    })
-    .fail( function( resp ) {
+    function addStudent() {
+        var addStudentForm = document.getElementsByName('add-new-student-form')[0];
+        addStudentForm.submit();
+        addStudentForm.reset();
+        return false;
+    }
 
-    });
-  }
-  if ( loginButton !== null ) {
-    loginButton.addEventListener('click', tryLogin);
+    function submitQuiz() {
+        var submitQuizForm = document.getElementsByName('student-take-quiz-form')[0];
+        submitQuizForm.submit();
+        submitQuizForm.reset();
+        return false;
+    }
 
-    var user = wrapper.find('.username').val().trim(),
-        password = wrapper.find('.pass').val();
-  }
+    var addNewStudentButton = document.getElementById('add-new-student');
+
+    if ( addNewStudentButton !== null ) {
+      addNewStudentButton.addEventListener('click', addStudent);
+    }
+
+    var submitQuizButton = document.getElementById('submit-quiz');
+
+    if ( submitQuizButton !== null ) {
+      submitQuizButton.addEventListener('click', submitQuiz);
+    }
+
 });

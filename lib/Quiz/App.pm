@@ -2,6 +2,7 @@ package Quiz::App;
 use Dancer2;
 use Dancer2::Plugin::DBIC;
 use Dancer2::Session::Simple;
+use Dancer2::Plugin::Database;
 use Data::Dumper;
 
 our $VERSION = '0.1';
@@ -23,11 +24,8 @@ get '/' => sub {
 post '/login' => sub {
     my $username = params->{username};
     my $password = params->{password};
-warn $username;
 
     my $user =  resultset('User')->search( username => $username, passwd => $password )->first();
-
-warn Dumper $user;
 
     if ( !$user ) {
         redirect '/';
@@ -43,6 +41,45 @@ warn Dumper $user;
     else {
         redirect '/student'
     }
+};
+
+post '/add-new-student' => sub {
+    my $student_first_name = params->{firstname};
+    my $student_last_name  = params->{lastname};
+    my $student_username   = params->{username};
+    my $student_password   = params->{password};
+
+  #   resultset('User')->populate([
+  #   [ qw( first_name ) ],
+  #   [ 'first_name', $student_first_name ],
+  #   [ 'last_name', $student_last_name ],
+  #   [ 'username', $student_username ],
+  #   [ 'passwd', $student_password ],
+  # ]);
+
+      resultset('User')->populate([
+        {
+            id => 6,
+            first_name => $student_first_name,
+            last_name => $student_last_name,
+            username => $student_username,
+            passwd => $student_password
+        }
+      ]);
+
+    # my $new_student = resultset('User')->new_result({
+    #     first_name => $student_first_name,
+    #     last_name => $student_last_name,
+    #     username => $student_username,
+    #     passwd => $student_password
+    # });
+
+    redirect '/home/student-add-success'
+
+};
+
+post '/submit-quiz' => sub {
+    
 };
 
 get '/home' => sub {
@@ -75,6 +112,22 @@ get '/home/create-quiz' => sub {
 
 get '/home/add-student' => sub {
     template 'add-student';
+};
+
+get '/home/student-add-success' => sub {
+    template 'student-add-success';
+};
+
+get '/home/view-students' => sub {
+    template 'view-students';
+};
+
+get '/home/view-quizes' => sub {
+    template 'view-quizes';
+};
+
+get '/student/quiz' => sub {
+    template 'take-quiz';
 };
 
 true;

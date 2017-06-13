@@ -1,14 +1,14 @@
-<form class="add-student-form">
+<form class="add-student-form" method='POST' action='/add-new-student' name='add-new-student-form'>
   <h1>Add a new student</h1>
   <label for="input-text">First name</label>
-  <input type="text" name="input-text" class="question-text" placeholder="First name">
+  <input type="text" name="firstname" class="question-text" placeholder="First name">
   <label for="input-text">Last name</label>
-  <input type="text" name="input-text" class="question-text" placeholder="Last name">
+  <input type="text" name="lastname" class="question-text" placeholder="Last name">
   <label for="input-text">Login username</label>
-  <input type="text" name="input-text" class="question-text" placeholder="Username">
+  <input type="text" name="username" class="question-text" placeholder="Username">
   <label for="input-text">Password</label>
-  <input type="text" name="input-text" class="question-text" placeholder="Password">
+  <input type="text" name="password" class="question-text" placeholder="Password">
   <div class="submit-wrapper">
-    <button id="add-new-student" type="button" name="create-quiz">Add new student</button>
+    <button type="button" value="submit" id="add-new-student" name="create-quiz">Add new student</button>
   </div>
 </form>
