@@ -7,6 +7,13 @@ $(document).ready(function () {
         return false;
     }
 
+    function addQuiz() {
+        var addQuizForm = document.getElementsByName('create-new-quiz-form')[0];
+        addQuizForm.submit();
+        addQuizForm.reset();
+        return false;
+    }
+
     function submitQuiz() {
         var submitQuizForm = document.getElementsByName('student-take-quiz-form')[0];
         submitQuizForm.submit();
@@ -24,6 +31,12 @@ $(document).ready(function () {
 
     if ( submitQuizButton !== null ) {
       submitQuizButton.addEventListener('click', submitQuiz);
+    }
+
+    var submitQuizButton = document.getElementById('create-new-quiz');
+
+    if ( submitQuizButton !== null ) {
+      submitQuizButton.addEventListener('click', addQuiz);
     }
 
 });

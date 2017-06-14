@@ -9,24 +9,14 @@
             </tr>
         </thead>
         <tbody>
+            <% FOREACH student IN students %>
             <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>12345</td>
+                <td><% student.first_name %></td>
+                <td><% student.last_name %></td>
+                <td><% student.username %></td>
+                <td><% student.passwd %></td>
             </tr>
-            <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>12345</td>
-            </tr>
-            <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-                <td>12345</td>
-            </tr>
+            <% END %>
         </tbody>
     </table>
 </div>

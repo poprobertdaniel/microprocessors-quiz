@@ -1,7 +1,7 @@
-<form class="create-quiz-form">
+<form class="create-quiz-form" name="create-new-quiz-form" method='POST' action='/add-new-quiz'>
   <h1>Add a question to the quiz</h1>
   <label for="input-text">Question text</label>
-  <input type="text" name="input-text" class="question-text" placeholder="Quiestion text">
+  <input type="text" name="questiontext" class="question-text" placeholder="Quiestion text">
   <label for="input-text">First answer</label>
   <input type="text" name="input-text" class="question-text" placeholder="First answer">
   <label for="input-text">Second answer</label>

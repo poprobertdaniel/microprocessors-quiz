@@ -8,21 +8,13 @@
             </tr>
         </thead>
         <tbody>
+            <% FOREACH question IN questions %>
             <tr>
-                <td>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</td>
-                <td>test</td>
-                <td>test</td>
+                <td> <% question.question_text %> </td>
+                <td> <% question.chapter %> </td>
+                <td> <% question.score %> </td>
             </tr>
-            <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-            </tr>
-            <tr>
-                <td>test</td>
-                <td>test</td>
-                <td>test</td>
-            </tr>
+            <% END %>
         </tbody>
     </table>
 </div>

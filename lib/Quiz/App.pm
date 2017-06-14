@@ -50,7 +50,6 @@ post '/add-new-student' => sub {
     my $student_password   = params->{password};
 
       resultset('User')->create({
-            id => 6,
             first_name => $student_first_name,
             last_name => $student_last_name,
             username => $student_username,
@@ -62,6 +61,11 @@ post '/add-new-student' => sub {
 
 post '/submit-quiz' => sub {
 
+};
+
+post '/add-new-quiz' => sub {
+    my $question = params->{questiontext};
+    warn $question;
 };
 
 get '/home' => sub {
