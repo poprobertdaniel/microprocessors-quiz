@@ -49,37 +49,19 @@ post '/add-new-student' => sub {
     my $student_username   = params->{username};
     my $student_password   = params->{password};
 
-  #   resultset('User')->populate([
-  #   [ qw( first_name ) ],
-  #   [ 'first_name', $student_first_name ],
-  #   [ 'last_name', $student_last_name ],
-  #   [ 'username', $student_username ],
-  #   [ 'passwd', $student_password ],
-  # ]);
-
-      resultset('User')->populate([
-        {
+      resultset('User')->create({
             id => 6,
             first_name => $student_first_name,
             last_name => $student_last_name,
             username => $student_username,
             passwd => $student_password
-        }
-      ]);
-
-    # my $new_student = resultset('User')->new_result({
-    #     first_name => $student_first_name,
-    #     last_name => $student_last_name,
-    #     username => $student_username,
-    #     passwd => $student_password
-    # });
+        });
 
     redirect '/home/student-add-success'
-
 };
 
 post '/submit-quiz' => sub {
-    
+
 };
 
 get '/home' => sub {
@@ -119,11 +101,17 @@ get '/home/student-add-success' => sub {
 };
 
 get '/home/view-students' => sub {
-    template 'view-students';
+    my @students = resultset('User')->search({is_admin => 0})->all();
+    $_ = $_->to_hash foreach (@students);
+    my $data = { students => \@students};
+    template 'view-students', $data, {};
 };
 
 get '/home/view-quizes' => sub {
-    template 'view-quizes';
+    my @questions = resultset('Question')->search({})->all();
+    $_ = $_->to_hash foreach (@questions);
+    my $data = { questions => \@questions};
+    template 'view-quizes', $data, {};
 };
 
 get '/student/quiz' => sub {
